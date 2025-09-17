@@ -10,7 +10,7 @@ schema = {
             "order": {"type": "string"},
             "customer": {"type": "object", "name": {"type": "string"}, "email": {"type": "string"}},
             "items": {"type": "array", "sku": {"type": "string"}, "name": {"type": "string"}, "qty": {"type": "integer"},
-                        "price": {"type": "์number"}},
+                        "price": {"type": "number"}},
             "total": {"type": "number"},
             "currency": {"type": "string"}
         },
@@ -33,3 +33,4 @@ resp = completion(
 content = resp.choices[0].message["content"]
 print("RAW JSON:\n", content)
 print("\nParsed:\n", json.dumps(json.loads(content), indent=2))
+
